@@ -1,0 +1,15 @@
+#!/bin/bash
+if [[ "$1" == "on" ]]; then
+	echo "Set maintainance mode on"
+	sudo rm /etc/nginx/sites-enabled/default
+	sudo ln -s /etc/nginx/sites-available/maintainance /etc/nginx/sites-enabled/maintainance
+elif [[ "$1" == "off" ]]; then
+	echo "Set maintainance mode off"
+	sudo rm /etc/nginx/sites-enabled/maintainance
+	sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+else
+	echo "Usage: setMaintainanceMode [on/off]"
+fi
+echo "Reload nginx"
+sudo systemctl restart nginx
+echo "Done"
