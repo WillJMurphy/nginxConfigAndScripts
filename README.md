@@ -1,7 +1,7 @@
 # nginx config for IP cams on the web
 The nginx config I use to expose my IP cams to the internet.
 
-From  https://blog.willmurphy.co.uk/secure_ip_cam_streaming/
+From  https://blog.willmurphy.co.uk/secure\_ip\_cam\_streaming/
 ---
 *default* 
 
